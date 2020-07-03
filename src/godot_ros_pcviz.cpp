@@ -30,7 +30,7 @@ GodotRosPcviz::~GodotRosPcviz()
 
 void GodotRosPcviz::_init()
 {
-    cloud_sub = nh.subscribe<sensor_msgs::PointCloud2>("/kitti/velo/pointcloud", 1000, &GodotRosPcviz::cloud_cb, this);
+    cloud_sub = nh.subscribe<sensor_msgs::PointCloud2>("point_cloud", 10, &GodotRosPcviz::cloud_cb, this);
     rng = RandomNumberGenerator::_new();
     rng->randomize();
     std::vector<uchar> vec(256);
@@ -92,5 +92,6 @@ void GodotRosPcviz::_process(float delta)
 
 void GodotRosPcviz::cloud_cb(const sensor_msgs::PointCloud2ConstPtr& msg)
 {
+    ROS_INFO_STREAM("new cloud");
     sensor_msgs::convertPointCloud2ToPointCloud(*msg, latest_cloud);
 }
