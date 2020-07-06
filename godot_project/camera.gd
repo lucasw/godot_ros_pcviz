@@ -9,7 +9,7 @@ var old_mouse_pos = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$angle.rotate_object_local(Vector3.RIGHT, -0.7)
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
