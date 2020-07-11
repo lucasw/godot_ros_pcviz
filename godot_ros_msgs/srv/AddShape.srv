@@ -1,0 +1,4 @@
+godot_ros_msgs/TexturedShape[] shapes
+---
+string message  # ""
+bool success  # False

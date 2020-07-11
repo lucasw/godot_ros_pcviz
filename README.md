@@ -2,16 +2,17 @@
 
 ![Screen Shot](resource/ss.png)
 
-## Usage (with docker, docker-compose)
 ```
-$ git clone https://github.com/ymd-stella/godot_ros_pcviz.git
+$ git clone https://github.com/lucas/godot_ros_pcviz.git
 $ cd godot_ros_pcviz
 $ git submodule update --init --recursive
-$ cd docker
-$ ./run.sh
-$ ./godot # open Godot
 ```
+
+```
+catkin build
+```
+
 on Godot
 ```
-[Import] -> [Browse] -> Choose /home/tom/catkin_ws/deve/lib/godot_ros_pcviz/project.godot -> [Import & Edit] -> [Play] or [F5]
+[Import] -> [Browse] -> Choose `godot_ros_pcviz/godot_ros/project.godot -> [Import & Edit] -> [Play] or [F5]
 ```

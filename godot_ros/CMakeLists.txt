@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(godot_ros_pcviz)
+project(godot_ros)
 
 add_compile_options(-std=c++14)
 
 find_package(catkin REQUIRED
 COMPONENTS
   geometry_msgs
+  godot_ros_msgs
   pcl_ros
   roscpp
   sensor_msgs
