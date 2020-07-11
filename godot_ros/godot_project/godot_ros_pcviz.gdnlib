@@ -7,7 +7,7 @@ reloadable=true
 
 [entry]
 
-X11.64="res://libgodot_ros_pcviz.so"
+X11.64="res://lib/libgodot_ros.so"
 
 [dependencies]
 
