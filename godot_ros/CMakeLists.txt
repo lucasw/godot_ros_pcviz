@@ -47,7 +47,7 @@ set_target_properties(${PROJECT_NAME}
   LIBRARY_OUTPUT_DIRECTORY ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}
   POSITION_INDEPENDENT_CODE ON)
 
-configure_file(${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/lib${PROJECT_NAME}.so ${CMAKE_CURRENT_LIST_DIR}/godot_project/lib/lib${PROJECT_NAME}.so COPYONLY)
+# configure_file(${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/lib${PROJECT_NAME}.so ${CMAKE_CURRENT_LIST_DIR}/godot_project/lib/lib${PROJECT_NAME}.so COPYONLY)
 configure_file(godot_project/godot_ros_pcviz.gdnlib  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/godot_ros_pcviz.gdnlib COPYONLY)
 configure_file(godot_project/godot_ros_pcviz.gdns  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/godot_ros_pcviz.gdns COPYONLY)
 configure_file(godot_project/project.godot  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/project.godot COPYONLY)
