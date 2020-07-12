@@ -97,11 +97,5 @@ jobs:
       - name: Archive lib
         uses: actions/upload-artifact@v2
         with:
-          name: godot_ros_lib
-          # TODO(lucasw) build in install
-          path: ~/catkin_ws/devel/lib/godot_ros_pcviz
-      - name: Archive share
-        uses: actions/upload-artifact@v2
-        with:
-          name: godot_ros_share
-          path: ~/catkin_ws/devel/share/godot_ros_pcviz
+          name: godot_ros_project
+          path: ~/catkin_ws/src/work/godot_ros_pcviz/godot_ros_pcviz/godot_ros/godot_project/
