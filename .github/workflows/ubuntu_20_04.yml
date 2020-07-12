@@ -91,7 +91,7 @@ jobs:
           ln -s ~/work
           cd ..
           catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
-          catkin build
+          catkin build --verbose
       # TODO(lucasw) combine the lib and share
       - name: Archive lib
         uses: actions/upload-artifact@v2
