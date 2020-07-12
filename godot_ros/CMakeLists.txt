@@ -44,10 +44,11 @@ target_link_libraries(${PROJECT_NAME}
 
 set_target_properties(${PROJECT_NAME}
   PROPERTIES
-  LIBRARY_OUTPUT_DIRECTORY ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}
+  # TODO(lucasw) need to handle install case, put this in install dir instead
+  LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/godot_project/lib
   POSITION_INDEPENDENT_CODE ON)
 
-# configure_file(${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/lib${PROJECT_NAME}.so ${CMAKE_CURRENT_LIST_DIR}/godot_project/lib/lib${PROJECT_NAME}.so COPYONLY)
+# TODO(lucasw) these run before the above, so doesn't work for built files
 configure_file(godot_project/godot_ros_pcviz.gdnlib  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/godot_ros_pcviz.gdnlib COPYONLY)
 configure_file(godot_project/godot_ros_pcviz.gdns  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/godot_ros_pcviz.gdns COPYONLY)
 configure_file(godot_project/project.godot  ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_BIN_DESTINATION}/project.godot COPYONLY)
