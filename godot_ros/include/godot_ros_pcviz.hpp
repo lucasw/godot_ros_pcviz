@@ -43,6 +43,8 @@ public:
 
     void _process(float delta);
 
+    void _publish_float(float val);  // const char* topic);
+
     sensor_msgs::PointCloud latest_cloud;
 
     void cloud_cb(const sensor_msgs::PointCloud2ConstPtr& msg);

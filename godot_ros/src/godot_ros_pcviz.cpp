@@ -17,6 +17,7 @@ void GodotRosPcviz::_register_methods()
 {
     register_method("_ready", &GodotRosPcviz::_ready);
     register_method("_process", &GodotRosPcviz::_process);
+    register_method("_publish_float", &GodotRosPcviz::_publish_float);
     Ref<PackedScene> default_scene = PackedScene::_new();
     register_property<GodotRosPcviz, Ref<PackedScene>>("immediate_geometry", &GodotRosPcviz::immediate_geometry_scene, *default_scene);
 }
@@ -88,6 +89,13 @@ void GodotRosPcviz::_process(float delta)
             immediate_geometry->end();
         }
     }
+}
+
+// TODO(lucasw) use godot::String for string
+
+void GodotRosPcviz::_publish_float(float val)  // (std::string topic)
+{
+  ROS_INFO_STREAM(val);
 }
 
 void GodotRosPcviz::cloud_cb(const sensor_msgs::PointCloud2ConstPtr& msg)
